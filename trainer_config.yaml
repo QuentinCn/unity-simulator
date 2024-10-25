@@ -1,6 +1,6 @@
 behaviors:
   CarAgent:
-    trainer_type: ppo  # or sac or other trainers supported
+    trainer_type: ppo  # You can use ppo or other trainers, like sac
     hyperparameters:
       batch_size: 1024
       buffer_size: 10240
@@ -19,4 +19,4 @@ behaviors:
         strength: 1.0
     max_steps: 5.0e5
     time_horizon: 64
-    summary_freq: 10000
+    summary_freq: 1000

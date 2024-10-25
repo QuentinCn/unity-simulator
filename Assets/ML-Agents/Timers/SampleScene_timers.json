@@ -1,1 +1,74 @@
-{"count":1,"self":10.123216,"total":10.595101,"children":{"InitializeActuators":{"count":1,"self":0.0015282,"total":0.0015282,"children":null},"InitializeSensors":{"count":1,"self":0.0040342,"total":0.0040342,"children":null},"AgentSendState":{"count":274,"self":0.0035459999999999997,"total":0.4613134,"children":{"CollectObservations":{"count":274,"self":0,"total":0,"children":null},"WriteActionMask":{"count":274,"self":0.0010395,"total":0.0010395,"children":null},"RequestDecision":{"count":274,"self":0.0019618,"total":0.45672789999999996,"children":{"CameraSensor.GetCompressedObservation":{"count":274,"self":0.4547661,"total":0.4547661,"children":null}}}}},"DecideAction":{"count":274,"self":0.0020058,"total":0.0020058,"children":null},"AgentAct":{"count":274,"self":0.0030031999999999997,"total":0.0030031999999999997,"children":null}},"gauges":{},"metadata":{"timer_format_version":"0.1.0","start_time_seconds":"1727445034","unity_version":"2022.3.45f1","command_line_arguments":"C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.45f1\\Editor\\Unity.exe -projectpath C:\\Users\\quent\\PycharmProjects\\CarRacingML -useHub -hubIPC -cloudEnvironment production -licensingIpc LicenseClient-quent -hubSessionId 1a899a02-fcc5-4485-bc18-d24b180ed195 -accessToken NnKvPVXpMnvBktR-8QXwo3IEnjkAJHU7G_1BPxxrVU4012f","communication_protocol_version":"1.5.0","com.unity.ml-agents_version":"2.0.1","scene_name":"SampleScene","end_time_seconds":"1727445044"}}
+{
+  "count": 1,
+  "self": 10.123216,
+  "total": 10.595101,
+  "children": {
+    "InitializeActuators": {
+      "count": 1,
+      "self": 0.0015282,
+      "total": 0.0015282,
+      "children": null
+    },
+    "InitializeSensors": {
+      "count": 1,
+      "self": 0.0040342,
+      "total": 0.0040342,
+      "children": null
+    },
+    "AgentSendState": {
+      "count": 274,
+      "self": 0.0035459999999999997,
+      "total": 0.4613134,
+      "children": {
+        "CollectObservations": {
+          "count": 274,
+          "self": 0,
+          "total": 0,
+          "children": null
+        },
+        "WriteActionMask": {
+          "count": 274,
+          "self": 0.0010395,
+          "total": 0.0010395,
+          "children": null
+        },
+        "RequestDecision": {
+          "count": 274,
+          "self": 0.0019618,
+          "total": 0.45672789999999996,
+          "children": {
+            "CameraSensor.GetCompressedObservation": {
+              "count": 274,
+              "self": 0.4547661,
+              "total": 0.4547661,
+              "children": null
+            }
+          }
+        }
+      }
+    },
+    "DecideAction": {
+      "count": 274,
+      "self": 0.0020058,
+      "total": 0.0020058,
+      "children": null
+    },
+    "AgentAct": {
+      "count": 274,
+      "self": 0.0030031999999999997,
+      "total": 0.0030031999999999997,
+      "children": null
+    }
+  },
+  "gauges": {},
+  "metadata": {
+    "timer_format_version": "0.1.0",
+    "start_time_seconds": "1727445034",
+    "unity_version": "2022.3.45f1",
+    "command_line_arguments": "C:\\Program Files\\Unity\\Hub\\Editor\\2022.3.45f1\\Editor\\Unity.exe -projectpath C:\\Users\\quent\\PycharmProjects\\CarRacingML -useHub -hubIPC -cloudEnvironment production -licensingIpc LicenseClient-quent -hubSessionId 1a899a02-fcc5-4485-bc18-d24b180ed195 -accessToken NnKvPVXpMnvBktR-8QXwo3IEnjkAJHU7G_1BPxxrVU4012f",
+    "communication_protocol_version": "1.5.0",
+    "com.unity.ml-agents_version": "2.0.1",
+    "scene_name": "SampleScene",
+    "end_time_seconds": "1727445044"
+  }
+}
