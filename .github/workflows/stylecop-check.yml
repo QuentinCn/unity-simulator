@@ -1,0 +1,32 @@
+name: StyleCop Check
+
+# Trigger the workflow on pushes and pull requests
+on:
+  push:
+    branches: [ main ] # Or any other branch you want to protect
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository code
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.x' # Specify your .NET version
+
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build with StyleCop
+        # This command will treat StyleCop warnings as errors and fail the build if any are found
+        run: dotnet build --no-restore /warnaserror
+
+      # (Optional) Run tests if you have a test project
+      - name: Run tests
+        run: dotnet test --no-restore --verbosity normal
