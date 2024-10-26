@@ -1,0 +1,44 @@
+name: Sync with Upstream
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          repository: QuentinCn/unity-simulator
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
+
+      - name: Add Upstream
+        run: |
+          git remote add upstream https://github.com/Tek5-robocar/unity-simulator.git
+          git fetch upstream
+
+      - name: Merge main from upstream
+        run: |
+          git checkout main
+          git merge upstream/main --allow-unrelated-histories || echo "No updates in main"
+
+      - name: Merge dev from upstream
+        run: |
+          git checkout dev
+          git merge upstream/dev --allow-unrelated-histories || echo "No updates in dev"
+
+      - name: Pull remote changes for dev
+        run: |
+          git checkout dev
+          git pull origin dev || echo "No changes to pull"
+
+      - name: Push Changes
+        run: |
+          git push origin main
+          git push origin dev
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
